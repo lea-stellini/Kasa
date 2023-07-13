@@ -1,0 +1,23 @@
+@import "../../utils/variables.scss";
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 100px;
+}
+
+.navbar{
+    display: -webkit-inline-flex;
+    justify-content: space-between;
+    width: 20%;
+
+    &__link{
+        color: $primary;
+        text-decoration: none; 
+
+        &:active{
+            text-decoration: underline ;
+        }
+    }
+}
