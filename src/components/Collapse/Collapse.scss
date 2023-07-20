@@ -1,0 +1,57 @@
+@import "../../utils/variables.scss";
+
+.collapse{
+    width: 100%;
+    background-color: $primary;
+    margin:0 auto 20px auto;
+    border-radius: 5px;
+    
+
+    &__title{
+        color:$secondary;
+        font-size: 24px;
+        font-weight: 500;
+        padding-left: 15px; 
+    }
+
+    &__arrow{
+        width:24px;
+        height: 14px;
+        padding-right: 20px;
+    }
+
+    @media (max-width: 500px){
+        width: 90%;
+    }
+
+   
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collapse{
+
+    &__content{
+       background-color: #F4F4F4;
+    border-radius: 0 0 5px 5px; 
+    }
+    
+    
+    
+    &__text{
+        margin:0;
+        text-align:left;
+        padding: 10px 15px;
+        font-weight:400;
+        font-size: 14px;
+        color: $primary;
+    }
+
+    &__list{
+        list-style: none;
+    }
+}

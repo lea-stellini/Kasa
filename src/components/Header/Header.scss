@@ -5,10 +5,19 @@
     align-items: center;
     justify-content: space-between;
     margin: 40px 100px;
+
+    @media (max-width: 500px){
+        margin: 20px;
+
+        &__logo{
+            width:145px;
+            height: 47px;
+        }
+    }
 }
 
 .navbar{
-    display: -webkit-inline-flex;
+    display: flex;
     justify-content: space-between;
     width: 20%;
 
@@ -18,6 +27,16 @@
 
         &:active{
             text-decoration: underline ;
+        }
+    }
+
+    @media (max-width:500px){
+        width: 50%;
+        justify-content: space-around;
+
+        &__link{
+            text-transform: uppercase;
+            font-size: 12px;
         }
     }
 }
