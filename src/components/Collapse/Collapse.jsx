@@ -1,34 +1,29 @@
 import PropTypes from 'prop-types'
 import './Collapse.scss'
 import upArrow from '../../assets/up-arrow.png'
-import downArrow from '../../assets/down-arrow.png'
 import { useState } from 'react'
 function Collapse({ title, description, equipments }) {
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [rotateChevron, setRotateChevron] = useState(false)
+
+    const handleRotate = () => setRotateChevron(!rotateChevron)
 
     return(
  
         <div className='collapse'>
             <div className='flex'>
                 <h1 className='collapse__title'>{title}</h1>
-                {isOpen ? 
-                <img src={downArrow} className='collapse__arrow' onClick={() => setIsOpen(false)}/> 
-                : 
-                <img src={upArrow} className='collapse__arrow' onClick={() => setIsOpen(true)}/>  }
+                
+                <img src={upArrow} className={`collapse__arrow ${rotateChevron ? "rotate" : ""}`} onClick={handleRotate}/>  
             </div>
             {
-                isOpen ? 
+                rotateChevron ? 
             <div className='collapse__content'>
                 <div className='collapse__text'>{description ? <p>{description}</p> : <ul> {equipments.map((equipment, index) => <li className='collapse__list' key={`${equipment}-${index}`}>{equipment}</li> )}</ul>}</div>
             </div> : null
             }
             
         </div>
-        
-
-        
-
     )
 }
 

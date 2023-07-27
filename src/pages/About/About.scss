@@ -8,10 +8,11 @@
   
 
     &__collapses{
+        width: 80%;
         height: 70%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;  
-        margin-top: 20px;
+        margin: 20px auto 0 auto;
     }
 }

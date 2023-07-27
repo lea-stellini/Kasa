@@ -1,0 +1,81 @@
+@import "../../utils/variables.scss";
+
+.accommodation{
+    max-width: 1240px;
+    width: 90%;
+    margin: 20px auto;
+
+    &__flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: auto;
+    }
+
+    &__flexcol{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height:139px;
+        margin-bottom:10px;
+    }
+
+    &__text{
+       color:$primary;   
+       margin:0;
+    }
+
+    &__title{
+        font-size: 36px;
+        font-weight: 500;
+       
+    }
+
+    &__subtitle, &__name{
+        font-size: 18px;
+    }
+
+    &__name{
+        text-align: right;
+        margin-right: 5px;
+    }
+
+    &__hote{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 44px;
+    }
+
+    &__name{
+        width: 50%;
+    }
+
+    &__picture{
+        width: 44px;
+        height:44px;
+        border-radius: 25px;
+    }
+
+    &__tags{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__tag{
+        background-color: $primary;
+        color: $secondary;
+        border-radius: 10px;
+        width: 115px;
+        padding: 5px 0;
+        text-align: center;
+        margin-right: 10px
+    }
+
+    &__collapse{
+       width: 48%;
+
+    }
+}
+

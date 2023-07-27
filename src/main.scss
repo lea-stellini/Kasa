@@ -1,4 +1,8 @@
-#root{
+body{
+    margin: 0;
+}
+
+.layout{
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction:column;

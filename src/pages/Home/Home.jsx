@@ -8,12 +8,12 @@ function Home() {
 
 
   return(
-    <div>
+    <div className='home'>
         <Banner image={landscape} title='Chez vous, partout et ailleurs'/>
-        <div className='cardList'>
+        <div className='home__cardList'>
            {datas.map( data => {
             return (
-                <Card key={data.id} title={data.title}/>
+                <Card key={data.id} title={data.title} link={`/accommodation/${data.id}`}/>
             )
             
             })} 

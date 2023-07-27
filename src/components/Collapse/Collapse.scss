@@ -17,14 +17,21 @@
     &__arrow{
         width:24px;
         height: 14px;
-        padding-right: 20px;
+        padding:0 20px;
+        transform: rotate(0deg);
+        transition: all 0.3s linear;
     }
 
     @media (max-width: 500px){
         width: 90%;
     }
 
-   
+}
+
+.rotate{
+    transform: rotate(-180deg);
+    transition: all 0.3s linear;
+    display: block;
 }
 
 .flex{

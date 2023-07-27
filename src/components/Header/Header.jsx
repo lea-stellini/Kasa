@@ -1,8 +1,11 @@
 import logo from '../../assets/logo/logo.png'
-import { Link } from 'react-router-dom'
+import { Link, useResolvedPath } from 'react-router-dom'
 import './Header.scss'
 
+
 function Header() {
+
+    const url = useResolvedPath().pathname;
 
     return (
         <div className="header">
@@ -11,8 +14,19 @@ function Header() {
             </Link>
 
             <nav className="navbar">
-                <Link to="/" className="navbar__link">Accueil</Link>
-                <Link to="/about" className="navbar__link">A Propos</Link>
+                {
+                    url === "/" ? 
+                    <Link to="/" className="navbar__link active">Accueil</Link>
+                    :
+                    <Link to="/" className="navbar__link">Accueil</Link>
+                }
+                {
+                    url === "/about" ?
+                    <Link to="/about" className="navbar__link active">A Propos</Link>
+                    :
+                    <Link to="/about" className="navbar__link">A Propos</Link>
+                    
+                 }
             </nav>
         </div>        
     )
