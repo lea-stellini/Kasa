@@ -14,19 +14,8 @@ function Header() {
             </Link>
 
             <nav className="navbar">
-                {
-                    url === "/" ? 
-                    <Link to="/" className="navbar__link active">Accueil</Link>
-                    :
-                    <Link to="/" className="navbar__link">Accueil</Link>
-                }
-                {
-                    url === "/about" ?
-                    <Link to="/about" className="navbar__link active">A Propos</Link>
-                    :
-                    <Link to="/about" className="navbar__link">A Propos</Link>
-                    
-                 }
+                <Link to="/" className={`navbar__link ${ url === "/" ? "active" : "" }`}>Accueil</Link>
+                <Link to="/about" className={`navbar__link ${ url === "/about" ? "active" : "" }`}>A Propos</Link>  
             </nav>
         </div>        
     )

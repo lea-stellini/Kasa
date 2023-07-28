@@ -1,6 +1,6 @@
 import './Carrousel.scss'
-import arrowForward from '../../assets/arrow_forward.png'
-import arrowBack from '../../assets/arrow_back.png'
+import arrowForward from '../../assets/icons/arrow_forward.png'
+import arrowBack from '../../assets/icons/arrow_back.png'
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 
@@ -19,8 +19,8 @@ function Carrousel({pictures}) {
             <img src={pictures[currentIndex]} className='carrousel__picture' />
             <div className='carrousel__container'>
                 <div className='carrousel__arrows'>
-                    <img src={arrowBack} onClick={(prevImg)} />
-                    <img src={arrowForward} onClick={(nextImg)}/>
+                    <img src={arrowBack} onClick={(prevImg)} className='carrousel__arrow'/>
+                    <img src={arrowForward} onClick={(nextImg)} className='carrousel__arrow'/>
                 </div>
                 <div className='carrousel__legend'>
                     <p>{`${currentIndex + 1}/${pictures.length}`}</p>

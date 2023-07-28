@@ -29,7 +29,7 @@ function Accommodation() {
                                         })}
                                     </div>
                                 </div>
-                                <div className="accommodation__flexcol">
+                                <div className="accommodation__flexrow">
                                     <div className="accommodation__hote">
                                         <p className="accommodation__name accommodation__text">{accommodation.host.name}</p>
                                         <img className="accommodation__picture" src={accommodation.host.picture}/> 
@@ -44,7 +44,7 @@ function Accommodation() {
                                     <Collapse title="Description" description={accommodation.description}/> 
                                 </div>
                                 <div className="accommodation__collapse">
-                                <Collapse title="Equipements" equipments={accommodation.equipments}/>  
+                                    <Collapse title="Equipements" equipments={accommodation.equipments}/>  
                                 </div>
                             </div>
                         </div>   

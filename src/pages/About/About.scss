@@ -14,5 +14,9 @@
         flex-direction: column;
         justify-content: space-between;  
         margin: 20px auto 0 auto;
+
+        @media(max-width:500px){
+            width: 100%;
+        }
     }
 }

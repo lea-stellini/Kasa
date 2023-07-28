@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import starActive from '../../assets/star-active.png'
-import starInactive from '../../assets/star-inactive.svg'
+import starActive from '../../assets/icons/star-active.png'
+import starInactive from '../../assets/icons/star-inactive.svg'
 
 function Rating({rating}) {
     function Rating(rating) {
@@ -16,9 +16,9 @@ function Rating({rating}) {
     }
 
     return (
-       <>
+       <div className='star'>
         {Rating(Number(rating))}
-       </> 
+       </div> 
     )
 }
 

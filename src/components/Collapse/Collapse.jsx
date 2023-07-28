@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import './Collapse.scss'
-import upArrow from '../../assets/up-arrow.png'
+import upArrow from '../../assets/icons/up-arrow.png'
 import { useState } from 'react'
 function Collapse({ title, description, equipments }) {
 
@@ -18,7 +18,7 @@ function Collapse({ title, description, equipments }) {
             </div>
             {
                 rotateChevron ? 
-            <div className='collapse__content'>
+            <div className='collapse__content slide'>
                 <div className='collapse__text'>{description ? <p>{description}</p> : <ul> {equipments.map((equipment, index) => <li className='collapse__list' key={`${equipment}-${index}`}>{equipment}</li> )}</ul>}</div>
             </div> : null
             }

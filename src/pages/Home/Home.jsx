@@ -13,7 +13,7 @@ function Home() {
         <div className='home__cardList'>
            {datas.map( data => {
             return (
-                <Card key={data.id} title={data.title} link={`/accommodation/${data.id}`}/>
+                <Card key={data.id} title={data.title} link={`/accommodation/${data.id}`} cover={data.cover}/>
             )
             
             })} 
