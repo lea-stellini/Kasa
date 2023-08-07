@@ -6,24 +6,44 @@ function Collapse({ title, description, equipments }) {
 
     const [rotateChevron, setRotateChevron] = useState(false)
 
-    const handleRotate = () => setRotateChevron(!rotateChevron)
+    const [collapseIsNeutral, setCollapseNeutral] = useState(true)
+
+    const [collapseActive, setCollapseActive] = useState(false)
+
+    const handleRotate = () => {
+        setRotateChevron(!rotateChevron)
+        setCollapseNeutral(false)
+        setCollapseActive(!collapseActive)
+    }
 
     return(
  
-        <div className='collapse'>
+        <>
+           <div className='collapse'>
             <div className='flex'>
                 <h1 className='collapse__title'>{title}</h1>
                 
                 <img src={upArrow} className={`collapse__arrow ${rotateChevron ? "rotate" : ""}`} onClick={handleRotate}/>  
             </div>
-            {
-                rotateChevron ? 
-            <div className='collapse__content slide'>
-                <div className='collapse__text'>{description ? <p>{description}</p> : <ul> {equipments.map((equipment, index) => <li className='collapse__list' key={`${equipment}-${index}`}>{equipment}</li> )}</ul>}</div>
-            </div> : null
-            }
             
-        </div>
+            
+            </div>
+            {
+                <div className={`${collapseIsNeutral ? "" : `${collapseActive ? "collapse__down" : "collapse__up" }` } `}>
+                    <div>{description ? 
+                        <p className={`collapse__text ${collapseIsNeutral ? "none" : ""}`}>{description}</p> 
+                        : 
+                        <ul className={`collapse__text ${collapseIsNeutral ? "none" : ""}`}>
+                            {equipments.map((equipment, index) => 
+                                <li className='collapse__list' key={`${equipment}-${index}`}>{equipment}</li> )}
+                        </ul>}
+                    </div>
+                </div> 
+            }
+           
+            
+        </>
+        
     )
 }
 

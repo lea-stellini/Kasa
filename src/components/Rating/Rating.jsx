@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import starActive from '../../assets/icons/star-active.png'
 import starInactive from '../../assets/icons/star-inactive.svg'
+import './Rating.scss'
 
 function Rating({rating}) {
     function Rating(rating) {

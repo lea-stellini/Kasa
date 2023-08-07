@@ -9,7 +9,7 @@
     max-width: 1240px;
 
     @media (max-width: 500px){
-        width: 80%;
+        width: 90%;
     }
    
     &__picture{
@@ -22,6 +22,7 @@
         @media (max-width:500px){
             width: 330px;
             height: 255px;
+            object-fit: cover;
         }
     }
 

@@ -5,7 +5,7 @@
     background-color: $primary;
     margin:0 auto 20px auto;
     border-radius: 5px;
-    
+    z-index: 5;
 
     &__title{
         color:$secondary;
@@ -26,53 +26,74 @@
         transition: all 0.3s linear;
     }
 
-    // @media (max-width: 500px){
-    //     width: 100%;
-    // }
-
-    &__content{
+    &__down{
         background-color: #F4F4F4;
-     border-radius: 0 0 5px 5px; 
-     }
+        border-radius: 0 0 5px 5px; 
+        margin: -20px auto 20px auto;
+        overflow: hidden;
+        max-height:0;
+        animation: slide 500ms ease-in-out both; 
+            
+    }
+    
+    &__up{
+        background-color: #F4F4F4;
+        border-radius: 0 0 5px 5px; 
+        margin: -20px auto 20px auto;
+        overflow: hidden;
+        transform-origin: top;
+        max-height: 140px;
+        animation: slideup 500ms ease-in-out both; 
+    }
+
+    &__text{
+        text-align:left;
+        padding: 10px 15px;
+        font-weight:400;
+        font-size: 14px;
+        color: $primary;
+    }
      
-     &__text{
-         margin:0;
-         text-align:left;
-         padding: 10px 15px;
-         font-weight:400;
-         font-size: 14px;
-         color: $primary;
-     }
- 
      &__list{
          list-style: none;
      }
 
 }
 
+@keyframes slide {
+    0% {
+        max-height: 0;
+    }
+    100%{
+        max-height: 140px;
+    }
+}
+
+@keyframes slideup {
+    0%{
+        max-height: 140px;
+    }
+    100% {
+    max-height: 0;
+    }
+}
+
 .rotate{
     transform: rotate(-180deg);
-    transition: all 0.3s linear;
     display: block;
 }
 
-.slide{
-    animation-name: slide;
-    animation-duration: 3s;
+.none{
+    display: none;
 }
-
-@keyframes slide {
-    from {
-        transform:translateY(0%);
-    }
-  
-    to {
-        transform:translateY(100%);
-    }
-  }
 
 .flex{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.container{
+    height: auto;
+    z-index:6;
 }
