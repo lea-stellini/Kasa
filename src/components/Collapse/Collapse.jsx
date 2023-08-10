@@ -3,15 +3,11 @@ import './Collapse.scss'
 import upArrow from '../../assets/icons/up-arrow.png'
 import { useState } from 'react'
 function Collapse({ title, description, equipments }) {
-
-    const [rotateChevron, setRotateChevron] = useState(false)
-
     const [collapseIsNeutral, setCollapseNeutral] = useState(true)
 
     const [collapseActive, setCollapseActive] = useState(false)
 
     const handleRotate = () => {
-        setRotateChevron(!rotateChevron)
         setCollapseNeutral(false)
         setCollapseActive(!collapseActive)
     }
@@ -23,7 +19,7 @@ function Collapse({ title, description, equipments }) {
             <div className='flex'>
                 <h1 className='collapse__title'>{title}</h1>
                 
-                <img src={upArrow} className={`collapse__arrow ${rotateChevron ? "rotate" : ""}`} onClick={handleRotate}/>  
+                <img src={upArrow} className={`collapse__arrow ${collapseActive ? "rotate" : ""}`} onClick={handleRotate}/>  
             </div>
             
             

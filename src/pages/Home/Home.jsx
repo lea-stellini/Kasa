@@ -9,7 +9,7 @@ function Home() {
 
   return(
     <div className='home'>
-        <Banner image={landscape} title='Chez vous, partout et ailleurs' size/>
+        <Banner image={landscape} title='Chez vous, partout et ailleurs' size="small"/>
         <div className='home__cardList'>
            {datas.map( data => {
             return (

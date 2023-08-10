@@ -4,6 +4,13 @@
     width:100%;
     margin:0 auto;
     position: relative;
+    height: 220px;
+
+    &__small{
+        @media (max-width: 500px){
+                height: 100px;
+        }
+    }
 
     &__image{
         width: 100%;
@@ -11,10 +18,6 @@
         object-fit: cover;
         border-radius: 25px;
         top: -10px;
-
-        @media (max-width: 500px){
-            height: 100%;
-        }
     }
 
     &__opacity{
@@ -42,12 +45,10 @@
             padding-right: 95px;
         }
     }
+
+  
 }
 
-.small{
-    height: 100px;
-}
 
-.medium{
-    height: 200px;
-}
+
+

@@ -42,7 +42,7 @@
         margin: -20px auto 20px auto;
         overflow: hidden;
         transform-origin: top;
-        max-height: 140px;
+        max-height: 270px;
         animation: slideup 500ms ease-in-out both; 
     }
 
@@ -65,16 +65,16 @@
         max-height: 0;
     }
     100%{
-        max-height: 140px;
+        max-height: 270px;
     }
 }
 
 @keyframes slideup {
     0%{
-        max-height: 140px;
+        max-height: 270px;
     }
     100% {
-    max-height: 0;
+        max-height: 0;
     }
 }
 
