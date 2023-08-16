@@ -17,15 +17,20 @@ function Carrousel({pictures}) {
     return ( 
         <div className='carrousel'>
             <img src={pictures[currentIndex]} className='carrousel__picture' />
-            <div className='carrousel__container'>
-                <div className='carrousel__arrows'>
-                    <img src={arrowBack} onClick={(prevImg)} className='carrousel__arrow'/>
-                    <img src={arrowForward} onClick={(nextImg)} className='carrousel__arrow'/>
+            { pictures.length === 1 ? 
+                null 
+                : 
+                <div className='carrousel__container'>
+                    <div className='carrousel__arrows'>
+                        <img src={arrowBack} onClick={(prevImg)} className='carrousel__arrow'/>
+                        <img src={arrowForward} onClick={(nextImg)} className='carrousel__arrow'/>
+                    </div>
+                    <div className='carrousel__legend'>
+                        <p>{`${currentIndex + 1}/${pictures.length}`}</p>
+                    </div>
                 </div>
-                <div className='carrousel__legend'>
-                    <p>{`${currentIndex + 1}/${pictures.length}`}</p>
-                </div>
-            </div>
+            }
+            
         </div>
 
     )

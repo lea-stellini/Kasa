@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 
 function Banner({ image, title, size }) {
 
-    
-
     return (
         <div className={`banner banner__${size}`}>
             <img src={image} className='banner__image'/>

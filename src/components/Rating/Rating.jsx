@@ -4,21 +4,24 @@ import starInactive from '../../assets/icons/star-inactive.svg'
 import './Rating.scss'
 
 function Rating({rating}) {
-    function Rating(rating) {
+    
+    function getRating(rating) {
         const active = new Array(rating).fill('')
         const inactive = new Array(5 - rating).fill("")
 
-        return <>{active.map((_, index) => 
-             <img src={starActive} key={`star-${index}`} />
-        )}
-        {inactive.map((_, index) => 
-            <img src={starInactive} key={`star-${index+rating}`} />
-        )}</>
+        return <>
+            {active.map((_, index) => 
+                <img src={starActive} key={`star-${index}`} />
+            )}
+            {inactive.map((_, index) => 
+                <img src={starInactive} key={`star-${index+rating}`} />
+            )}
+        </>
     }
 
     return (
        <div className='star'>
-        {Rating(Number(rating))}
+        {getRating(Number(rating))}
        </div> 
     )
 }

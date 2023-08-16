@@ -13,7 +13,6 @@ function Collapse({ title, description, equipments }) {
     }
 
     return(
- 
         <>
            <div className='collapse'>
             <div className='flex'>
@@ -21,8 +20,6 @@ function Collapse({ title, description, equipments }) {
                 
                 <img src={upArrow} className={`collapse__arrow ${collapseActive ? "rotate" : ""}`} onClick={handleRotate}/>  
             </div>
-            
-            
             </div>
             {
                 <div className={`${collapseIsNeutral ? "" : `${collapseActive ? "collapse__down" : "collapse__up" }` } `}>
@@ -36,10 +33,7 @@ function Collapse({ title, description, equipments }) {
                     </div>
                 </div> 
             }
-           
-            
         </>
-        
     )
 }
 

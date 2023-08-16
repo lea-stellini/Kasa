@@ -32,8 +32,7 @@
         margin: -20px auto 20px auto;
         overflow: hidden;
         max-height:0;
-        animation: slide 500ms ease-in-out both; 
-            
+        animation: slide 500ms ease-in-out both;    
     }
     
     &__up{
@@ -91,9 +90,4 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.container{
-    height: auto;
-    z-index:6;
 }
