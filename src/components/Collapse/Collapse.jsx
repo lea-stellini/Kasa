@@ -15,18 +15,18 @@ function Collapse({ title, description, equipments }) {
     return(
         <>
            <div className='collapse'>
-            <div className='flex'>
-                <h1 className='collapse__title'>{title}</h1>
-                
-                <img src={upArrow} className={`collapse__arrow ${collapseActive ? "rotate" : ""}`} onClick={handleRotate}/>  
-            </div>
+                <div className='collapse__flex'>
+                    <h1 className='collapse__title'>{title}</h1>
+                    
+                    <img src={upArrow} className={`collapse__arrow ${collapseActive ? "collapse__rotate" : ""}`} onClick={handleRotate}/>  
+                </div>
             </div>
             {
                 <div className={`${collapseIsNeutral ? "" : `${collapseActive ? "collapse__down" : "collapse__up" }` } `}>
                     <div>{description ? 
-                        <p className={`collapse__text ${collapseIsNeutral ? "none" : ""}`}>{description}</p> 
+                        <p className={`collapse__text ${collapseIsNeutral ? "collapse__none" : ""}`}>{description}</p> 
                         : 
-                        <ul className={`collapse__text ${collapseIsNeutral ? "none" : ""}`}>
+                        <ul className={`collapse__text ${collapseIsNeutral ? "collapse__none" : ""}`}>
                             {equipments.map((equipment, index) => 
                                 <li className='collapse__list' key={`${equipment}-${index}`}>{equipment}</li> )}
                         </ul>}
