@@ -26,20 +26,19 @@
         transition: all 0.3s linear;
     }
 
-    &__down{
-        background-color: #F4F4F4;
+    &__animation{
+        background-color: $collapse_background;
         border-radius: 0 0 5px 5px; 
         margin: -20px auto 20px auto;
         overflow: hidden;
+    }
+
+    &__down{
         max-height:0;
         animation: slide 500ms ease-in-out both;    
     }
     
     &__up{
-        background-color: #F4F4F4;
-        border-radius: 0 0 5px 5px; 
-        margin: -20px auto 20px auto;
-        overflow: hidden;
         transform-origin: top;
         max-height: 270px;
         animation: slideup 500ms ease-in-out both; 

@@ -22,15 +22,15 @@ function Collapse({ title, description, equipments }) {
                 </div>
             </div>
             {
-                <div className={`${collapseIsNeutral ? "" : `${collapseActive ? "collapse__down" : "collapse__up" }` } `}>
-                    <div>{description ? 
+                <div className={`${collapseIsNeutral ? "" : `${collapseActive ? "collapse__animation collapse__down" : "collapse__animation collapse__up" }` } `}>
+                    {description ? 
                         <p className={`collapse__text ${collapseIsNeutral ? "collapse__none" : ""}`}>{description}</p> 
                         : 
                         <ul className={`collapse__text ${collapseIsNeutral ? "collapse__none" : ""}`}>
                             {equipments.map((equipment, index) => 
                                 <li className='collapse__list' key={`${equipment}-${index}`}>{equipment}</li> )}
                         </ul>}
-                    </div>
+                                
                 </div> 
             }
         </>
