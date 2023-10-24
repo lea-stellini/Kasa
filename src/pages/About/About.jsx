@@ -1,4 +1,4 @@
-import landscape from '../../assets/images/landscape2.png'
+import landscape from 'Kasa/assets/images/landscape2.png'
 import Banner from '../../components/Banner/Banner'
 import Collapse from '../../components/Collapse/Collapse'
 import './About.scss'
