@@ -2,7 +2,7 @@ import './Home.scss'
 import Banner from '../../components/Banner/Banner.jsx'
 import datas from '../../datas/accommodation.json'
 import Card from '../../components/Card/Card.jsx'
-import landscape from 'Kasa/assets/images/landscape1.png'
+import landscape from '../../assets/images/landscape1.png'
 
 function Home() {
 
