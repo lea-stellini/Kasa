@@ -8,9 +8,9 @@ function Navbar() {
 
     return(
         <Routes>
-          <Route exact path='/Kasa' element={<Home />}/>
-          <Route path='Kasa/about' element={<About />}/>
-          <Route path='Kasa/accommodation/:id' element={<Accommodation />} />
+          <Route exact path='/Kasa/' element={<Home />}/>
+          <Route path='/Kasa/about' element={<About />}/>
+          <Route path='/Kasa/accommodation/:id' element={<Accommodation />} />
           <Route path='*' element={<Error />} />
         </Routes>
     )

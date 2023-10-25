@@ -9,13 +9,13 @@ function Header() {
 
     return (
         <div className="header">
-            <Link to="/">
+            <Link to="/Kasa/">
                 <img src={logo} alt="logo de Kasa" className="header__logo"/>
             </Link>
 
             <nav className="navbar">
-                <Link to="/" className={`navbar__link ${ url === "/" ? "active" : "" }`}>Accueil</Link>
-                <Link to="/about" className={`navbar__link ${ url === "/about" ? "active" : "" }`}>A Propos</Link>  
+                <Link to="/Kasa/" className={`navbar__link ${ url === "/" ? "active" : "" }`}>Accueil</Link>
+                <Link to="/Kasa/about" className={`navbar__link ${ url === "/about" ? "active" : "" }`}>A Propos</Link>  
             </nav>
         </div>        
     )
